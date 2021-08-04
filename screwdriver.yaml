@@ -7,6 +7,7 @@ jobs:
         requires: [~commit, ~pr]
         steps:
             - hello: echo test
+            - justtest: echo justtest
             - status: |
                 meta set meta.status.coverage '{"status":"PENDING","message":"Coverage must be below 80%."}'
                 meta set meta.status.findbugs '{"status":"SUCCESS","message":"No Bugs Found!"}'
